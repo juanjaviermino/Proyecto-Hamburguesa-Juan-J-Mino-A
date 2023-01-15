@@ -67,7 +67,10 @@
         </CollectionView>
         <Grid Grid.Row="2" ColumnDefinitions="*" BackgroundColor="#e6e6e6">
             <VerticalStackLayout Grid.Row="0" Grid.Column="0" Spacing="5" Margin="20">
-                <Button 
+                <Button Pressed="onPressed"
+                        Released="onReleased"
+                        BackgroundColor="#512bd4"
+                        x:Name="BotonAñadirJM"
                         Text="Añadir nuevo registro"
                         HorizontalOptions="Center"
                         WidthRequest="200"
@@ -75,7 +78,9 @@
                         FontAttributes="Bold"
                         Margin="0"
                         CornerRadius="20"/>
-                <Button BackgroundColor="#e6e6e6"
+                <Button 
+                        x:Name="BotonPurgarJM"
+                        BackgroundColor="#e6e6e6"
                         Text="Purgar la lista completa"
                         TextColor="Purple"
                         WidthRequest="180"
@@ -87,3 +92,4 @@
         </Grid>
     </Grid>
 </ContentPage>
+

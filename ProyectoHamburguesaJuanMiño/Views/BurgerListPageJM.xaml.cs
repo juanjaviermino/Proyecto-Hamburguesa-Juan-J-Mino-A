@@ -144,4 +144,14 @@ public partial class BurgerListPageJM : ContentPage
             return;
         }
     }
+
+    private void onPressed(object sender, EventArgs e)
+    {
+        BotonAñadirJM.BackgroundColor = Color.FromArgb("#D52941");
+    }
+
+    private void onReleased(object sender, EventArgs e)
+    {
+        BotonAñadirJM.BackgroundColor = Color.FromArgb("#512bd4");
+    }
 }
