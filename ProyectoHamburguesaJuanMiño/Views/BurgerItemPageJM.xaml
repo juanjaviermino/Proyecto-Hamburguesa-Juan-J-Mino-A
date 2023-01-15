@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProyectoHamburguesaJuanMiño.Views.BurgerItemPageJM"
+             xmlns:models="clr-namespace:ProyectoHamburguesaJuanMiño.Models"
+             Title="Registro de hamburguesas">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="10" VerticalOptions="StartAndExpand">
+            <Button Text="◀ Cancelar" 
+                    TextColor="#512bd4"
+                    WidthRequest="80"
+                    HeightRequest="30"
+                    FontAttributes="Bold"
+                    BackgroundColor="White"
+                    BorderWidth="0"
+                    Clicked="OnCancelClicked"
+                    HorizontalOptions="Start"
+                    Padding="0"/>
+            <Label Text="Nombre: " />
+            <Entry x:Name="nombreJM" 
+                   Text="{Binding NombreJM}" 
+                   Placeholder="Ej. Combo 1"/>
+            <Label Text="Descripción: " />
+            <Entry x:Name="descripcionJM" 
+                   Text="{Binding DescripcionJM}" 
+                   Placeholder="Ej. Ingredientes y tamaño"/>
+            <HorizontalStackLayout>
+                <CheckBox x:Name="checkJM" IsChecked="{Binding ConQuesoExtraJM}" CheckedChanged="OnCheckBoxCheckedChanged" />
+                <Label Text="  ¿Con queso extra?" VerticalOptions="Center"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                <Button Text="Eliminar" 
+                    FontAttributes="Bold"
+                    WidthRequest="120"
+                    BackgroundColor="#D52941"
+                    Clicked="eliminarBurgerBDD"
+                    CornerRadius="20"
+                    />
+                <Button Text="Guardar"
+                        FontAttributes="Bold"
+                        WidthRequest="120"
+                        Clicked="OnSaveClicked" 
+                        CornerRadius="20"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
